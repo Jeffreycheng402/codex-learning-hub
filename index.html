@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Codex Learning Hub：面向初学者、大学 IT 学生和开发者的 Codex 在线学习课程。">
+  <title>Codex Learning Hub：从零开始学习 Codex</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Codex Learning Hub 首页">
+      <span class="brand-mark">CL</span>
+      <span>Codex Learning Hub</span>
+    </a>
+    <nav class="topnav" aria-label="主导航">
+      <a href="#beginner">新手入门</a>
+      <a href="#workflow">使用流程</a>
+      <a href="#prompts">Prompt Library</a>
+      <a href="#safety">安全指南</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <button class="language-toggle" type="button" aria-label="Switch language" data-language-toggle>English</button>
+    <button class="theme-toggle" type="button" aria-label="切换深色或浅色模式" data-theme-toggle>深色</button>
+  </header>
+
+  <main id="home">
+    <section class="hero section-block">
+      <div class="hero-copy">
+        <p class="eyebrow">面向大学 IT / Programming 学生的在线课程</p>
+        <h1>Codex Learning Hub：从零开始学习 Codex</h1>
+        <p class="hero-lead">Codex 是 OpenAI 的 AI coding agent：它能阅读项目、解释代码、提出修改、编辑文件、运行命令并检查结果，是帮助你进入真实编程循环的学习搭档。</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#roadmap">Start Learning</a>
+          <a class="button secondary" href="#prompts">View Prompt Library</a>
+        </div>
+        <div class="audience-grid" aria-label="适合人群">
+          <span>Codex 初学者</span>
+          <span>大学 IT 学生</span>
+          <span>编程新手</span>
+          <span>效率型开发者</span>
+        </div>
+      </div>
+      <figure class="hero-visual">
+        <button class="preview-trigger" type="button" data-preview-open aria-label="打开课程预览大图">
+          <img src="assets/course-preview.png" alt="Codex 入门指南课程页面预览">
+          <span class="preview-overlay">点击放大预览</span>
+        </button>
+        <figcaption>从原文档重组为可自学、可搜索、可复制 prompt 的课程站点。点击图片可放大查看。</figcaption>
+      </figure>
+    </section>
+
+    <section class="section-block info-architecture" id="structure">
+      <div class="section-heading">
+        <p class="eyebrow">Information Architecture</p>
+        <h2>网站学习结构</h2>
+        <p>内容按“认识工具 -> 建立流程 -> 用于作业 -> 复制 prompt -> 安全提交”的顺序组织，适合从零开始自学。</p>
+      </div>
+      <div class="ia-grid">
+        <article>
+          <strong>Home</strong>
+          <span>快速理解 Codex、适合人群和学习入口。</span>
+        </article>
+        <article>
+          <strong>Beginner Guide</strong>
+          <span>Codex 是什么、和 ChatGPT/Copilot 的区别、第一次怎么用。</span>
+        </article>
+        <article>
+          <strong>Workflow</strong>
+          <span>ChatGPT、VS Code、Terminal、GitHub、Codex App 的使用流程。</span>
+        </article>
+        <article>
+          <strong>Assignment Helper</strong>
+          <span>Requirement、rubric、最小修改、诚信边界和答辩准备。</span>
+        </article>
+        <article>
+          <strong>Prompt Library</strong>
+          <span>按场景整理可复制 prompt 卡片。</span>
+        </article>
+        <article>
+          <strong>Safety / Git / FAQ</strong>
+          <span>备份、diff、隐私、危险命令、GitHub 协作和常见问题。</span>
+        </article>
+      </div>
+    </section>
+
+    <div class="learning-shell">
+      <aside class="sidebar" aria-label="章节目录">
+        <label class="search-box">
+          <span>关键词搜索</span>
+          <input id="siteSearch" type="search" placeholder="搜索：rubric、C++、GitHub...">
+        </label>
+        <nav class="toc">
+          <a href="#beginner">01 新手入门</a>
+          <a href="#workflow">02 使用流程</a>
+          <a href="#assignment">03 作业辅助</a>
+          <a href="#prompts">04 Prompt Library</a>
+          <a href="#safety">05 安全指南</a>
+          <a href="#roadmap">06 学习路线图</a>
+          <a href="#git">07 Git/GitHub</a>
+          <a href="#cases">08 实战案例</a>
+          <a href="#faq">09 FAQ</a>
+          <a href="#next">10 下一步</a>
+        </nav>
+      </aside>
+
+      <div class="content">
+        <section class="course-section searchable" id="beginner">
+          <p class="eyebrow">Beginner Guide</p>
+          <h2>新手入门</h2>
+          <div class="two-column">
+            <article class="lesson-card">
+              <h3>Codex 是什么</h3>
+              <p>Codex 不是普通代码补全。它是一种能使用工具的 AI coding agent：可以读文件、编辑、运行命令、检查输出，并在得到新信息后继续调整。</p>
+              <div class="callout">最好的使用方式：让它解释、检查、定位、提出小修改，然后你自己理解、验证并负责最终提交。</div>
+            </article>
+            <article class="lesson-card">
+              <h3>Codex vs ChatGPT vs Copilot</h3>
+              <ul>
+                <li><strong>ChatGPT：</strong>更像会讲解的老师，适合解释概念和分析你粘贴的材料。</li>
+                <li><strong>GitHub Copilot：</strong>更像 IDE 中的补全助手，强在实时补全和局部建议。</li>
+                <li><strong>Codex：</strong>更像进入项目现场的编程搭档，能读项目、改文件、跑测试、总结 diff。</li>
+              </ul>
+            </article>
+          </div>
+          <div class="lesson-card">
+            <h3>Codex 能帮学生做什么</h3>
+            <div class="feature-grid">
+              <span>解释陌生代码</span>
+              <span>定位 bug 与 compile error</span>
+              <span>把 rubric 转成 checklist</span>
+              <span>生成测试用例表</span>
+              <span>检查 README 与 GitHub PR</span>
+              <span>准备老师 viva/demo 问题</span>
+            </div>
+          </div>
+          <div class="lesson-card">
+            <h3>第一次使用 Codex 的步骤</h3>
+            <ol class="steps">
+              <li>选择一个小项目或课堂练习，不要一开始就用整份 assignment。</li>
+              <li>提供课程语言、你的水平、项目入口文件和运行方式。</li>
+              <li>先要求 Codex 总结项目结构，不允许修改文件。</li>
+              <li>让它解释 50-100 行代码，并用一个输入例子 trace 执行过程。</li>
+              <li>再让它检查一个小 bug 或一个 rubric 项，要求最小修改建议。</li>
+              <li>看 diff、运行测试、自己复述逻辑后再提交。</li>
+            </ol>
+          </div>
+        </section>
+
+        <section class="course-section searchable" id="workflow">
+          <p class="eyebrow">Workflow</p>
+          <h2>使用流程</h2>
+          <div class="workflow-list">
+            <article>
+              <h3>ChatGPT 中使用 Codex</h3>
+              <p>适合概念学习、解释代码片段、分析 assignment requirement、生成 prompt、准备答辩问题。把相关文件、错误截图、terminal output 和 rubric 放在同一轮对话里，并说明课程语言和你的水平。</p>
+              <pre><code>我是一名大学 IT 初学者。请先阅读 assignment requirement 和 rubric，只做检查清单，不要写代码。然后告诉我需要提供哪些文件才能进一步检查。</code></pre>
+            </article>
+            <article>
+              <h3>VS Code 中使用 Codex</h3>
+              <p>适合边写边解释、修复当前文件、检查多个文件关系和 review diff。明确写清“只读/只改当前文件”“禁止重写”“保持 beginner-level style”。</p>
+              <pre><code>请只检查当前文件是否有明显 bug 和 readability 问题。先列出发现，不要修改。只有我确认后，才给最小 diff。</code></pre>
+            </article>
+            <article>
+              <h3>Terminal / CLI 中使用 Codex</h3>
+              <p>适合在项目根目录让 agent 读文件、编辑、运行 compile/test 命令。先让它确认 repo 结构，再运行安全的测试命令。</p>
+              <pre><code>请在当前项目中先运行测试并总结结果。不要修改文件。若测试失败，请指出最可能的 3 个原因和下一步验证命令。</code></pre>
+            </article>
+            <article>
+              <h3>GitHub 联动</h3>
+              <p>Codex 可以基于 repo、issue、PR、diff 和测试结果做检查。它适合总结改动、检查 README、生成 PR 描述、review bug 和 missing tests。</p>
+              <pre><code>请 review 这个 PR。请先列出高风险问题，再列出缺失测试，最后给一个简短 summary。不要讨论风格偏好，除非影响可读性或 requirement。</code></pre>
+            </article>
+            <article>
+              <h3>Codex App 桌面版</h3>
+              <p>适合管理多个项目、查看 diff、使用 worktree、Git 和更长时间的代码任务。把它当作任务控制中心，而不是一次性问答窗口。</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="course-section searchable" id="assignment">
+          <p class="eyebrow">Assignment Helper</p>
+          <h2>作业辅助</h2>
+          <div class="lesson-card emphasis">
+            <h3>核心原则</h3>
+            <p>Codex 应该帮助你理解要求、发现问题、学习修复方法，而不是替你完成全部核心工作。课程作业的最终责任永远在你。</p>
+          </div>
+          <div class="assignment-grid">
+            <article>
+              <h3>提供 requirement</h3>
+              <p>让 Codex 先总结任务目标、输入输出、限制和提交物。不要在它没理解要求时直接要求写代码。</p>
+            </article>
+            <article>
+              <h3>提供 rubric</h3>
+              <p>让 Codex 把 rubric 转成 checklist，并逐项标注已满足、部分满足、未满足或需要确认。</p>
+            </article>
+            <article>
+              <h3>要求最小修改</h3>
+              <p>限定允许修改的文件和范围，写清“不要重写整体结构、不要引入新库、保持我的风格”。</p>
+            </article>
+            <article>
+              <h3>避免 academic misconduct</h3>
+              <p>不要提交自己不能解释的代码；遵守学校 AI 政策；保留自己的草稿、笔记、测试和修改原因。</p>
+            </article>
+            <article>
+              <h3>准备老师可能问的问题</h3>
+              <p>让 Codex 根据你的真实代码生成 viva/demo 问题，覆盖逻辑、边界情况和设计选择。</p>
+            </article>
+            <article>
+              <h3>最终检查</h3>
+              <p>运行测试、看 diff、检查 README、确认没有隐私文件或临时文件，并确保你能解释每处关键修改。</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="course-section searchable" id="prompts">
+          <p class="eyebrow">Prompt Library</p>
+          <h2>可复制提示词库</h2>
+          <p class="section-intro">每张卡片都包含标题、使用场景和 prompt 内容。点击“复制”可直接复制，然后把课程语言、文件名、错误输出或 rubric 补充进去。</p>
+          <div class="prompt-toolbar">
+            <label>
+              <span>筛选 prompt</span>
+              <input id="promptSearch" type="search" placeholder="搜索：debug、README、cybersecurity">
+            </label>
+          </div>
+          <div class="prompt-grid" id="promptGrid">
+            <article class="prompt-card" data-tags="解释 code beginner">
+              <h3>解释代码 prompt</h3>
+              <p>适合看老师示例、同学项目、旧代码或报错附近代码。</p>
+              <pre><code>请用初学者能懂的中文解释这段代码。按：整体目的、每个函数、关键变量、执行流程、可能出错点、我应该复习的语法点来讲。不要改代码。</code></pre>
+              <button type="button" class="copy-btn">复制</button>
+            </article>
+            <article class="prompt-card" data-tags="debug bug">
+              <h3>Debug prompt</h3>
+              <p>适合程序结果不对、按钮无效、测试失败。</p>
+              <pre><code>这是预期结果、实际结果和相关代码。请先列出最可能的 3 个原因，以及每个原因如何验证。不要马上修改。</code></pre>
+              <button type="button" class="copy-btn">复制</button>
+            </article>
+            <article class="prompt-card" data-tags="compile error c++ java typescript">
+              <h3>Compile error prompt</h3>
+              <p>适合 C++、Java、TypeScript 编译失败。</p>
+              <pre><code>请解释这个 compile error 的真正含义，指出最可能的源代码位置，并给 beginner-friendly 的最小修复。请区分根本错误和连锁错误。</code></pre>
+              <button type="button" class="copy-btn">复制</button>
+            </article>
+            <article class="prompt-card" data-tags="rubric assignment checklist">
+              <h3>Rubric 检查 prompt</h3>
+              <p>适合提交前对照评分标准自查。</p>
+              <pre><code>请把这个 rubric 转成 checklist，并用我的代码逐项标注：已满足/部分满足/未满足/需要确认。每个问题给证据文件位置，不要直接帮我写缺失功能。</code></pre>
+              <button type="button" class="copy-btn">复制</button>
+            </article>
+            <article class="prompt-card" data-tags="c++ beginner input validation">
+              <h3>C++ prompt</h3>
+              <p>适合 C++ assignment、menu、function、file I/O 和 input validation。</p>
+              <pre><code>请保持 C++ beginner style，只使用我学过的 if/else、loops、functions、arrays/vector、basic file I/O。重点检查 input validation、menu、file I/O 和 edge cases，不要用高级库或 OOP 重构。</code></pre>
+              <button type="button" class="copy-btn">复制</button>
+            </article>
+            <article class="prompt-card" data-tags="python traceback data">
+              <h3>Python prompt</h3>
+              <p>适合 Python traceback、数据处理和函数拆分。</p>
+              <pre><code>请帮我 debug 这个 Python error。先解释 traceback 从下往上怎么看，再说明数据流和变量作用，最后给最小修复建议，保持初学者风格。</code></pre>
+              <button type="button" class="copy-btn">复制</button>
+            </article>
+            <article class="prompt-card" data-tags="html css javascript web responsive">
+              <h3>HTML/CSS/JavaScript prompt</h3>
+              <p>适合 web assignment 的布局、响应式、无障碍和交互检查。</p>
+              <pre><code>请检查这个网页 assignment 的 HTML/CSS/JS：layout、responsive、accessibility 和 JS interaction。先列问题和优先级，不要直接改。若需要修改，请只做最小修改。</code></pre>
+              <button type="button" class="copy-btn">复制</button>
+            </article>
+            <article class="prompt-card" data-tags="cybersecurity lab security report">
+              <h3>Cybersecurity lab prompt</h3>
+              <p>适合合法授权实验、靶场或 CTF training 的报告学习。</p>
+              <pre><code>这是授权 cybersecurity lab 的 terminal output。请解释每条命令和输出代表什么，说明风险等级、证据和防御建议，并帮我写 report 段落。不要提供非法攻击步骤。</code></pre>
+              <button type="button" class="copy-btn">复制</button>
+            </article>
+            <article class="prompt-card" data-tags="github repo review">
+              <h3>GitHub repo review prompt</h3>
+              <p>适合接手 repo、检查 README 或理解项目结构。</p>
+              <pre><code>请阅读这个 repo 并总结：项目目的、运行方式、主要文件、测试方式、潜在风险。先不要修改。请告诉我应该先看哪些文件。</code></pre>
+              <button type="button" class="copy-btn">复制</button>
+            </article>
+            <article class="prompt-card" data-tags="pull request pr review">
+              <h3>Pull request review prompt</h3>
+              <p>适合团队项目 merge 前检查。</p>
+              <pre><code>请 review 这个 PR，优先找 bug、regression、missing tests 和 requirement 不符。按 severity 排序，并给出具体文件位置和可执行建议。</code></pre>
+              <button type="button" class="copy-btn">复制</button>
+            </article>
+            <article class="prompt-card" data-tags="readme documentation">
+              <h3>README prompt</h3>
+              <p>适合课程项目、GitHub 提交和团队交付。</p>
+              <pre><code>请根据项目内容生成 beginner-friendly README：简介、功能、安装、运行、测试、文件结构、已知限制。不要夸大项目功能，所有命令必须来自实际项目配置。</code></pre>
+              <button type="button" class="copy-btn">复制</button>
+            </article>
+            <article class="prompt-card" data-tags="teacher viva demo questions">
+              <h3>老师提问准备 prompt</h3>
+              <p>适合 demo、口头答辩和代码检查前练习。</p>
+              <pre><code>请根据我的代码生成 10 个老师可能问的问题，并给简短参考回答，重点包括核心逻辑、边界情况、我为什么这样设计，以及哪些地方我必须能现场解释。</code></pre>
+              <button type="button" class="copy-btn">复制</button>
+            </article>
+          </div>
+        </section>
+
+        <section class="course-section searchable" id="safety">
+          <p class="eyebrow">Safety Guide</p>
+          <h2>安全使用指南</h2>
+          <div class="safety-grid">
+            <article>
+              <h3>为什么要备份</h3>
+              <p>Codex 可能误解 requirement、改到无关文件或引入新 bug。最简单的备份方式是 Git commit，也可以复制一份项目文件夹。</p>
+            </article>
+            <article>
+              <h3>如何看 diff</h3>
+              <p>diff 是修改前后的差异。接受修改前逐文件查看新增、删除、变更行，确认每处都和任务相关。</p>
+            </article>
+            <article>
+              <h3>避免乱改文件</h3>
+              <p>在 prompt 中写清允许查看和修改的文件范围，例如“只允许改 src/input.cpp 和 tests/input_test.cpp”。</p>
+            </article>
+            <article>
+              <h3>保护隐私</h3>
+              <p>不要在包含护照、银行卡、私人照片、密码、API key 的文件夹运行。公开 repo 前检查 `.env` 和临时文件。</p>
+            </article>
+            <article>
+              <h3>避免危险命令</h3>
+              <p>不要让它执行删除大量文件、上传隐私、改系统配置或操作真实攻击目标的命令。看不懂命令先要求解释。</p>
+            </article>
+          </div>
+          <div class="checklist">
+            <h3>Git checkpoint checklist</h3>
+            <label><input type="checkbox"> 我在正确的项目根目录运行 Codex</label>
+            <label><input type="checkbox"> 项目已经有 Git commit 或备份</label>
+            <label><input type="checkbox"> prompt 写清楚允许修改的文件范围</label>
+            <label><input type="checkbox"> 没有把隐私文件、密码、API key 放进项目</label>
+            <label><input type="checkbox"> 我会先看 diff，再接受修改</label>
+            <label><input type="checkbox"> 我运行了 compile/test/manual test</label>
+            <label><input type="checkbox"> 我能解释每一处关键修改</label>
+            <label><input type="checkbox"> 我确认没有违反学校 AI/academic integrity 政策</label>
+          </div>
+        </section>
+
+        <section class="course-section searchable" id="roadmap">
+          <p class="eyebrow">Learning Roadmap</p>
+          <h2>学习路线图</h2>
+          <div class="progress-panel">
+            <div>
+              <strong>课程进度</strong>
+              <span id="progressLabel">0 / 3 stages completed</span>
+            </div>
+            <div class="progress-track"><span id="progressBar"></span></div>
+          </div>
+          <div class="roadmap-grid">
+            <article class="roadmap-card">
+              <label><input type="checkbox" class="roadmap-check"> Beginner</label>
+              <h3>学习目标</h3>
+              <p>会让 Codex 解释代码、找简单 bug、检查 assignment。</p>
+              <h3>推荐练习</h3>
+              <p>每天选一个函数解释；用 rubric 做 checklist；修一个小 bug。</p>
+              <h3>推荐 prompt</h3>
+              <pre><code>请解释这段代码，并给我 3 个检查理解的问题。</code></pre>
+              <h3>完成后能力</h3>
+              <p>能清楚描述函数目的、输入输出、常见错误和下一步验证方式。</p>
+            </article>
+            <article class="roadmap-card">
+              <label><input type="checkbox" class="roadmap-check"> Intermediate</label>
+              <h3>学习目标</h3>
+              <p>会使用 VS Code 联动、读取整个项目、看 diff、用 Git 保存版本。</p>
+              <h3>推荐练习</h3>
+              <p>打开一个 repo；总结结构；改一处 bug；看 diff；commit。</p>
+              <h3>推荐 prompt</h3>
+              <pre><code>请阅读项目结构，说明入口、主要模块、测试命令和修改风险。</code></pre>
+              <h3>完成后能力</h3>
+              <p>能限制修改范围、解释 diff，并用 Git checkpoint 管理风险。</p>
+            </article>
+            <article class="roadmap-card">
+              <label><input type="checkbox" class="roadmap-check"> Advanced</label>
+              <h3>学习目标</h3>
+              <p>会使用 CLI、GitHub PR、code review、生成测试、改进项目结构。</p>
+              <h3>推荐练习</h3>
+              <p>在分支上让 Codex 修 bug 并跑测试；生成 PR 描述；review 自己 PR。</p>
+              <h3>推荐 prompt</h3>
+              <pre><code>请对这个 PR 做高信号 code review，优先找 bug 和 missing tests。</code></pre>
+              <h3>完成后能力</h3>
+              <p>能把 Codex 纳入完整工程流程：issue、branch、test、PR、review。</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="course-section searchable" id="git">
+          <p class="eyebrow">Git / GitHub Basics</p>
+          <h2>Git 与 GitHub 基础</h2>
+          <div class="terms-grid">
+            <article><strong>Git</strong><span>本地版本控制工具，记录文件修改历史。</span></article>
+            <article><strong>GitHub</strong><span>在线托管 Git repository 的平台，适合备份、协作和 PR。</span></article>
+            <article><strong>Commit</strong><span>一次保存点，包含修改内容和说明。</span></article>
+            <article><strong>Branch</strong><span>独立开发线，适合尝试功能或修 bug。</span></article>
+            <article><strong>Pull Request</strong><span>请求把一个分支的修改合并到另一个分支，并让别人 review。</span></article>
+            <article><strong>.gitignore</strong><span>告诉 Git 哪些文件不要追踪，例如 build output、env 和 cache。</span></article>
+          </div>
+          <pre><code>我对 Git 不熟。请解释当前 git status 和 git diff，告诉我哪些文件被修改、每个修改可能来自什么任务，以及下一步应该 commit、继续改还是回退。</code></pre>
+        </section>
+
+        <section class="course-section searchable" id="cases">
+          <p class="eyebrow">Practice Cases</p>
+          <h2>实战案例</h2>
+          <div class="case-grid">
+            <article>
+              <h3>C++ assignment</h3>
+              <p>检查 functions、input validation、menu、file I/O、array/vector 和 edge cases，保持 beginner-level code style。</p>
+            </article>
+            <article>
+              <h3>Python assignment</h3>
+              <p>解释脚本流程、debug traceback、检查 CSV/数据处理流程、建议函数拆分。</p>
+            </article>
+            <article>
+              <h3>Web development</h3>
+              <p>检查 HTML 语义结构、CSS layout、responsive、accessibility 和 JavaScript interaction。</p>
+            </article>
+            <article>
+              <h3>Cybersecurity lab</h3>
+              <p>只用于授权 lab：解释命令输出、分析漏洞原理、写防御性报告，不提供非法攻击步骤。</p>
+            </article>
+            <article>
+              <h3>GitHub PR</h3>
+              <p>总结改动、检查测试、找 regression、生成 PR description 和 reviewer 关注点。</p>
+            </article>
+            <article>
+              <h3>Documentation</h3>
+              <p>生成 README、system overview、user guide 和 reflection outline，必须和真实功能一致。</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="course-section searchable" id="faq">
+          <p class="eyebrow">FAQ</p>
+          <h2>常见问题</h2>
+          <div class="faq-list">
+            <details>
+              <summary>Codex 会不会帮我代写？</summary>
+              <p>它有能力生成代码，但你不应该把它当代写机器。更安全的用法是让它解释、检查、debug、给提示和最小修改建议；最终代码必须由你理解、验证并负责。</p>
+            </details>
+            <details>
+              <summary>Codex 和 Copilot 有什么区别？</summary>
+              <p>Copilot 强在 IDE 内实时补全和局部建议；Codex 更偏 agent workflow，可以围绕一个目标读项目、改文件、运行测试并总结结果。</p>
+            </details>
+            <details>
+              <summary>初学者应该先用哪种方式？</summary>
+              <p>先在 ChatGPT/Codex 里解释代码和 assignment requirement，再在 VS Code 中检查当前文件，最后学习 Git diff/commit 和 CLI/Codex App。</p>
+            </details>
+            <details>
+              <summary>Codex 会不会改坏我的代码？</summary>
+              <p>有可能，所以要先备份或 commit，限定修改范围，要求它先分析不修改，并在接受前逐个看 diff、运行测试。</p>
+            </details>
+            <details>
+              <summary>怎么让 Codex 不要写得太高级？</summary>
+              <p>在 prompt 里说明课程范围，例如“只使用 loops、functions、arrays/vector，不要 class、template、lambda 或外部库”，并要求保持你的原始 coding style。</p>
+            </details>
+            <details>
+              <summary>怎么用于 C++ assignment？</summary>
+              <p>让它重点检查 input validation、menu loop、function responsibilities、file I/O、array/vector 越界和 edge cases。不要让它重写整体结构。</p>
+            </details>
+            <details>
+              <summary>怎么用于 cybersecurity lab？</summary>
+              <p>只在授权环境使用。让它解释命令输出、风险等级、证据和修复建议，并明确要求不要提供真实目标利用、凭证窃取或持久化步骤。</p>
+            </details>
+          </div>
+        </section>
+
+        <section class="course-section searchable" id="next">
+          <p class="eyebrow">Summary</p>
+          <h2>总结与下一步学习建议</h2>
+          <div class="lesson-card emphasis">
+            <p>Codex 最重要的价值，不是让学生少学代码，而是让学生更快进入真实编程循环：理解需求、阅读代码、定位问题、做小修改、运行测试、看 diff、解释自己的选择。</p>
+          </div>
+          <ol class="steps">
+            <li>拿一个小 assignment 或练习项目，用 Beginner 路线走一遍。</li>
+            <li>每次只做一个小目标：解释、debug、检查、测试、总结。</li>
+            <li>学会写带背景、目标、范围、限制和输出格式的 prompt。</li>
+            <li>每次修改前先 checkpoint，每次修改后看 diff 并运行测试。</li>
+            <li>最终原则：先让 Codex 分析，再让它给最小建议，最后由你亲自理解、修改、运行和提交。</li>
+          </ol>
+          <p class="source-note">资料整理日期：2026-05-09。Codex 的界面、模型、权限、额度和集成方式可能更新，实际使用时请以官方页面和你本机版本为准。</p>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <button class="back-to-top" type="button" aria-label="返回顶部">↑</button>
+  <div class="image-modal" data-preview-modal hidden>
+    <div class="image-modal__backdrop" data-preview-close></div>
+    <div class="image-modal__dialog" role="dialog" aria-modal="true" aria-label="课程预览大图">
+      <div class="image-modal__bar">
+        <strong>课程预览大图</strong>
+        <div>
+          <a class="modal-link" href="assets/course-preview.png" target="_blank" rel="noreferrer">打开原图</a>
+          <button type="button" class="modal-close" data-preview-close aria-label="关闭预览">关闭</button>
+        </div>
+      </div>
+      <img src="assets/course-preview.png" alt="Codex 入门指南课程页面完整预览">
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
